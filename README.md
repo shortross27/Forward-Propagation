@@ -9,16 +9,6 @@ The project involves:
 3. Evaluating the model's performance with metrics like accuracy and loss.
 4. Visualizing results to gain insights into the model and the dataset.
 
-## Table of Contents
-Dataset
-Technologies Used
-Data Preprocessing
-Model Training
-Visualizations
-Setup Instructions
-Results
-Acknowledgements
-
 ## Dataset
 The dataset used is Churn_Modelling.csv, which includes:
 
