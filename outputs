@@ -1,25 +1,24 @@
-RowNumber  CustomerId   Surname  ...  IsActiveMember EstimatedSalary Exited
-0          1    15634602  Hargrave  ...               1       101348.88      1
-1          2    15647311      Hill  ...               1       112542.58      0
-2          3    15619304      Onio  ...               0       113931.57      1
-3          4    15701354      Boni  ...               0        93826.63      0
-4          5    15737888  Mitchell  ...               1        79084.10      0
-
-
-[5 rows x 14 columns]
+RowNumber  CustomerId   Surname  CreditScore Geography  Gender  Age  Tenure    Balance  NumOfProducts  HasCrCard  IsActiveMember  EstimatedSalary  Exited
+0          1    15634602  Hargrave          619    France  Female   42       2       0.00              1          1               1        101348.88       1
+1          2    15647311      Hill          608     Spain  Female   41       1   83807.86              1          0               1        112542.58       0
+2          3    15619304      Onio          502    France  Female   42       8  159660.80              3          1               0        113931.57       1
+3          4    15701354      Boni          699    France  Female   39       1       0.00              2          0               0         93826.63       0
+4          5    15737888  Mitchell          850     Spain  Female   43       2  125510.82              1          1               1         79084.10       0
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 10000 entries, 0 to 9999
+
+
 Data columns (total 14 columns):
- #   Column           Non-Null Count  Dtype  
----  ------           --------------  -----  
- 0   RowNumber        10000 non-null  int64  
- 1   CustomerId       10000 non-null  int64  
- 2   Surname          10000 non-null  object 
- 3   CreditScore      10000 non-null  int64  
- 4   Geography        10000 non-null  object 
- 5   Gender           10000 non-null  object 
- 6   Age              10000 non-null  int64  
- 7   Tenure           10000 non-null  int64  
+ #   Column           Non-Null Count  Dtype
+---  ------           --------------  -----
+ 0   RowNumber        10000 non-null  int64
+ 1   CustomerId       10000 non-null  int64
+ 2   Surname          10000 non-null  object
+ 3   CreditScore      10000 non-null  int64
+ 4   Geography        10000 non-null  object
+ 5   Gender           10000 non-null  object
+ 6   Age              10000 non-null  int64
+ 7   Tenure           10000 non-null  int64
  8   Balance          10000 non-null  float64
  9   NumOfProducts    10000 non-null  int64
  10  HasCrCard        10000 non-null  int64
@@ -27,27 +26,54 @@ Data columns (total 14 columns):
  12  EstimatedSalary  10000 non-null  float64
  13  Exited           10000 non-null  int64
 dtypes: float64(2), int64(9), object(3)
+memory usage: 1.1+ MB
 
 
 Epoch 1/10
-  1/307 [..............................] - ETA: 2:35 - loss: 0.6523 - accurac 88/307 [=======>......................] - ETA: 0s - loss: 0.5798 - accuracy:178/307 [================>.............] - ETA: 0s - loss: 0.5509 - accuracy:270/307 [=========================>....] - ETA: 0s - loss: 0.5361 - accuracy:307/307 [==============================] - 1s 575us/step - loss: 0.5296 - accuracy: 0.7959
+307/307 [==============================] - 1s 579us/step - loss: 0.5889 - accuracy: 0.7522
 Epoch 2/10
-  1/307 [..............................] - ETA: 0s - loss: 0.3372 - accuracy: 94/307 [========>.....................] - ETA: 0s - loss: 0.4807 - accuracy:186/307 [=================>............] - ETA: 0s - loss: 0.4726 - accuracy:277/307 [==========================>...] - ETA: 0s - loss: 0.4684 - accuracy:307/307 [==============================] - 0s 549us/step - loss: 0.4664 - accuracy: 0.7972
+307/307 [==============================] - 0s 548us/step - loss: 0.4829 - accuracy: 0.7969
 Epoch 3/10
-  1/307 [..............................] - ETA: 0s - loss: 0.3835 - accuracy: 91/307 [=======>......................] - ETA: 0s - loss: 0.4541 - accuracy:183/307 [================>.............] - ETA: 0s - loss: 0.4450 - accuracy:275/307 [=========================>....] - ETA: 0s - loss: 0.4384 - accuracy:307/307 [==============================] - 0s 556us/step - loss: 0.4373 - accuracy: 0.8018
+307/307 [==============================] - 0s 549us/step - loss: 0.4541 - accuracy: 0.7970
 Epoch 4/10
-  1/307 [..............................] - ETA: 0s - loss: 0.3729 - accuracy: 92/307 [=======>......................] - ETA: 0s - loss: 0.4194 - accuracy:187/307 [=================>............] - ETA: 0s - loss: 0.4170 - accuracy:270/307 [=========================>....] - ETA: 0s - loss: 0.4113 - accuracy:307/307 [==============================] - 0s 568us/step - loss: 0.4113 - accuracy: 0.8215
+307/307 [==============================] - 0s 542us/step - loss: 0.4398 - accuracy: 0.7966
 Epoch 5/10
-  1/307 [..............................] - ETA: 0s - loss: 0.3224 - accuracy: 93/307 [========>.....................] - ETA: 0s - loss: 0.3876 - accuracy:179/307 [================>.............] - ETA: 0s - loss: 0.3828 - accuracy:263/307 [========================>.....] - ETA: 0s - loss: 0.3872 - accuracy:307/307 [==============================] - 0s 576us/step - loss: 0.3893 - accuracy: 0.8423
+307/307 [==============================] - 0s 535us/step - loss: 0.4328 - accuracy: 0.8013
 Epoch 6/10
-  1/307 [..............................] - ETA: 0s - loss: 0.5070 - accuracy: 92/307 [=======>......................] - ETA: 0s - loss: 0.3767 - accuracy:182/307 [================>.............] - ETA: 0s - loss: 0.3772 - accuracy:259/307 [========================>.....] - ETA: 0s - loss: 0.3739 - accuracy:307/307 [==============================] - 0s 597us/step - loss: 0.3732 - accuracy: 0.8520
+307/307 [==============================] - 0s 534us/step - loss: 0.4284 - accuracy: 0.8114
 Epoch 7/10
-  1/307 [..............................] - ETA: 0s - loss: 0.3287 - accuracy: 91/307 [=======>......................] - ETA: 0s - loss: 0.3736 - accuracy:187/307 [=================>............] - ETA: 0s - loss: 0.3618 - accuracy:280/307 [==========================>...] - ETA: 0s - loss: 0.3626 - accuracy:307/307 [==============================] - 0s 545us/step - loss: 0.3622 - accuracy: 0.8545
+307/307 [==============================] - 0s 534us/step - loss: 0.4250 - accuracy: 0.8168
 Epoch 8/10
-  1/307 [..............................] - ETA: 0s - loss: 0.3594 - accuracy: 93/307 [========>.....................] - ETA: 0s - loss: 0.3597 - accuracy:183/307 [================>.............] - ETA: 0s - loss: 0.3508 - accuracy:272/307 [=========================>....] - ETA: 0s - loss: 0.3520 - accuracy:307/307 [==============================] - 0s 566us/step - loss: 0.3537 - accuracy: 0.8554
+307/307 [==============================] - 0s 531us/step - loss: 0.4221 - accuracy: 0.8183
 Epoch 9/10
-  1/307 [..............................] - ETA: 0s - loss: 0.2648 - accuracy: 90/307 [=======>......................] - ETA: 0s - loss: 0.3440 - accuracy:180/307 [================>.............] - ETA: 0s - loss: 0.3456 - accuracy:274/307 [=========================>....] - ETA: 0s - loss: 0.3420 - accuracy:307/307 [==============================] - 0s 559us/step - loss: 0.3469 - accuracy: 0.8590
+307/307 [==============================] - 0s 540us/step - loss: 0.4187 - accuracy: 0.8200
 Epoch 10/10
-  1/307 [..............................] - ETA: 0s - loss: 0.2245 - accuracy: 94/307 [========>.....................] - ETA: 0s - loss: 0.3410 - accuracy:188/307 [=================>............] - ETA: 0s - loss: 0.3464 - accuracy:279/307 [==========================>...] - ETA: 0s - loss: 0.3439 - accuracy:307/307 [==============================] - 0s 546us/step - loss: 0.3436 - accuracy: 0.8612
+307/307 [==============================] - 0s 550us/step - loss: 0.4154 - accuracy: 0.8235
 1/1 [==============================] - 0s 49ms/step
 [[False]]
+Epoch 1/10
+245/245 [==============================] - 0s 1ms/step - loss: 0.4100 - accuracy: 0.8270 - val_loss: 0.4205 - val_accuracy: 0.8194
+Epoch 2/10
+245/245 [==============================] - 0s 759us/step - loss: 0.4072 - accuracy: 0.8316 - val_loss: 0.4190 - val_accuracy: 0.8224
+Epoch 3/10
+245/245 [==============================] - 0s 801us/step - loss: 0.4044 - accuracy: 0.8347 - val_loss: 0.4190 - val_accuracy: 0.8245
+Epoch 4/10
+245/245 [==============================] - 0s 758us/step - loss: 0.4011 - accuracy: 0.8378 - val_loss: 0.4155 - val_accuracy: 0.8250
+Epoch 5/10
+245/245 [==============================] - 0s 802us/step - loss: 0.3980 - accuracy: 0.8407 - val_loss: 0.4143 - val_accuracy: 0.8265
+Epoch 6/10
+245/245 [==============================] - 0s 760us/step - loss: 0.3940 - accuracy: 0.8409 - val_loss: 0.4103 - val_accuracy: 0.8316
+Epoch 7/10
+245/245 [==============================] - 0s 756us/step - loss: 0.3891 - accuracy: 0.8436 - val_loss: 0.4057 - val_accuracy: 0.8316
+Epoch 8/10
+245/245 [==============================] - 0s 753us/step - loss: 0.3831 - accuracy: 0.8452 - val_loss: 0.4003 - val_accuracy: 0.8327
+Epoch 9/10
+245/245 [==============================] - 0s 748us/step - loss: 0.3753 - accuracy: 0.8487 - val_loss: 0.3923 - val_accuracy: 0.8332
+Epoch 10/10
+245/245 [==============================] - 0s 747us/step - loss: 0.3681 - accuracy: 0.8524 - val_loss: 0.3860 - val_accuracy: 0.8362
+7/7 [==============================] - 0s 334us/step
+7/7 [==============================] - 0s 490us/step
+
+
+Misclassified examples: [ 1  8 14 15 31]
+
