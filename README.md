@@ -114,12 +114,6 @@ sns.countplot(x=Y, palette='viridis')
 
 ![Class Distribution](https://github.com/user-attachments/assets/e68a2263-c6d4-42cc-966e-56b3a7d97dd9)
 
-**5. Feature Importance**
-Identifies which features most impact predictions.
-
-```python
-sns.barplot(x=feature_importance, y=feature_names)
-```
 
 ## Setup Instructions
 **Prerequisites:**
