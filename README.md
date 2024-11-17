@@ -129,22 +129,34 @@ Identifies which features most impact predictions.
 
 ```python
 sns.barplot(x=feature_importance, y=feature_names)
-Setup Instructions
-Prerequisites:
-Python 3.8 or higher.
-Install required packages:
-bash
-Copy code
+```
+
+## Setup Instructions
+**Prerequisites:**
+- Python 3.8 or higher.
+- Install required packages:
+```python
 pip install numpy pandas tensorflow scikit-learn matplotlib seaborn
-Running the Project:
-Clone the repository and navigate to the directory.
-Place the dataset Churn_Modelling.csv in the directory.
-Run the script:
-bash
-Copy code
-python churn_prediction.py
-Results
-The ANN achieved an accuracy of XX% on the test set.
-Key insights from visualizations:
-The model performs well in separating churn and non-churn cases.
-Certain features like X, Y, Z significantly influence predictions.
+```
+
+## Results
+**1. Model Accuracy**
+- The ANN achieved **85% accuracy** on the training set and **83.5% accuracy** on the validation set after 10 epochs, as shown in the **Training and Validation Accuracy Plot**.
+- The accuracy trends indicate that the model learned effectively without significant overfitting.
+
+**2. Confusion Matrix**
+- The confusion matrix highlights the performance of the model in predicting churn versus non-churn cases:
+  - **True Negatives (Not Churn predicted correctly):** 147
+  - **True Positives (Churn predicted correctly):** 20
+  - **False Positives (Not Churn predicted as Churn):** 5
+  - **False Negatives (Churn predicted as Not Churn):** 28
+- These results demonstrate that the model is particularly strong at predicting customers who will not churn, while there is room for improvement in identifying customers who are likely to churn.
+
+**3. ROC Curve**
+- The **Receiver Operating Characteristic (ROC) Curve** has an **AUC (Area Under Curve) of 0.92**, indicating excellent model performance.
+The high AUC score reflects the model's ability to distinguish between customers likely to churn and those who are not, with a strong balance between true positive and false positive rates.
+
+## Key Insights:
+The ANN effectively separates churn and non-churn cases, achieving strong overall accuracy and reliability.
+- **Strengths:** High precision in predicting non-churn cases.
+- **Challenges:** Higher false negatives (28) suggest the model could benefit from further tuning to improve churn prediction accuracy.
